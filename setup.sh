@@ -7,7 +7,7 @@ setup(){
     local TOP=${PWD}
 
     setup -q debug -f Linux+2.6-2.5 root v5_30_00
-    export M32=-m32
+    export M32=-m64
     export MODE="NUMI"
     # setup for jobsub client
     # according to the prescription in Mike Kirby's talk
@@ -25,13 +25,12 @@ setup(){
     echo "setting PPFX_DIR=${PPFX_DIR}"
     export LD_LIBRARY_PATH=$PPFX_DIR/lib:$LD_LIBRARY_PATH
     echo "LD_LIBRARY_PATH=$LD_LIBRARY_PATH"
+
+#    source /nusoft/app/externals/setup
+#    setup -q debug:e5 -f Linux64bit+2.6-2.5 dk2nu v01_01_03
+
+    source /grid/fermiapp/products/nova/externals/setup
+    setup -q debug:e9:r5 -f Linux64bit+2.6-2.12 dk2nu v01_05_00
+
 }
-HOST=$(hostname -f)
-echo $HOST
-if echo "$HOST" | grep 'minerva';then
-echo "executing for the minerva machine"
 setup
-fi
-if echo "$HOST" | grep 'dune';then
-echo "This is not a dune machine. Try setup_for_dune.sh <MODE>"
-fi
