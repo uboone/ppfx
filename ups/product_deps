@@ -1,6 +1,6 @@
 # The parent line must be the first non-comment line in the file
 # This line defines the product name and version
-parent ppfx  v02_12_01
+parent ppfx  v02_13_00
 defaultqual     e19
 
 # These optional lines define the installed directories where
@@ -18,10 +18,10 @@ bindir      fq_dir      bin
 # note that art -q  depends, via root, on geant4 and more
 # this means that we only need to list art, cry, and genie as a dependencies
 product         version
-dk2nugenie      v01_08_00l
-dk2nudata       v01_08_00g
-ifdh_art        v2_10_07
-cetbuildtools   v7_15_01        -        only_for_build
+dk2nugenie      v01_08_00m
+dk2nudata       v01_08_00h
+ifdh_art        v2_11_04
+cetbuildtools   v7_17_01        -        only_for_build
 end_product_list
 
 
@@ -30,12 +30,10 @@ end_product_list
 qualifier     dk2nugenie     dk2nudata      ifdh_art           notes
 c7:debug      c7:debug       c7:debug       c7:debug
 c7:prof       c7:prof        c7:prof        c7:prof
+e20:debug     e20:debug      e20:debug      e20:debug
+e20:prof      e20:prof       e20:prof       e20:prof
 e19:debug     e19:debug      e19:debug      e19:debug
 e19:prof      e19:prof       e19:prof       e19:prof
-c7:py2:debug  c7:py2:debug   c7:py2:debug   c7:py2:debug
-c7:py2:prof   c7:py2:prof    c7:py2:prof    c7:py2:prof
-e19:py2:debug e19:py2:debug  e19:py2:debug  e19:py2:debug
-e19:py2:prof  e19:py2:prof   e19:py2:prof   e19:py2:prof
 end_qualifier_list
 
 # Preserve tabs and formatting in emacs and vi / vim:

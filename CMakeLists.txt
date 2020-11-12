@@ -14,10 +14,9 @@
 # ======================================================================
 
 
-# use cmake 2.8 or later
-cmake_minimum_required (VERSION 3.3)
+cmake_minimum_required(VERSION 3.12...3.18 FATAL_ERROR)
 
-project(ppfx)
+project(ppfx LANGUAGES CXX)
 
 # cetbuildtools contains our cmake modules
 find_package(cetbuildtools REQUIRED)
