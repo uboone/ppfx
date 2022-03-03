@@ -1,6 +1,6 @@
 # The parent line must be the first non-comment line in the file
 # This line defines the product name and version
-parent ppfx  v02_14_09
+parent ppfx  v02_14_10
 defaultqual     e20
 
 # These optional lines define the installed directories where
@@ -20,8 +20,8 @@ bindir      fq_dir      bin
 product         version
 dk2nugenie      v01_10_00d
 dk2nudata       v01_10_00d
-ifdh_art        v2_13_04
-cetbuildtools   v8_18_05        -        only_for_build
+ifdh_art        v2_13_05
+cetbuildtools   v8_19_02        -        only_for_build
 end_product_list
 
 
