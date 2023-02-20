@@ -1,6 +1,6 @@
 # The parent line must be the first non-comment line in the file
 # This line defines the product name and version
-parent ppfx  v02_15_06
+parent ppfx  v02_16_00
 defaultqual     e20
 
 # These optional lines define the installed directories where
@@ -18,9 +18,9 @@ bindir      fq_dir      bin
 # note that art -q  depends, via root, on geant4 and more
 # this means that we only need to list art, cry, and genie as a dependencies
 product         version
-dk2nugenie      v01_10_01a
-dk2nudata       v01_10_01a
-ifdh_art        v2_13_16
+dk2nugenie      v01_10_01d
+dk2nudata       v01_10_01c
+ifdh_art        v2_15_03
 cetbuildtools   v8_20_00        -        only_for_build
 end_product_list
 
@@ -28,12 +28,14 @@ end_product_list
 # -nq- here means there is no qualifier
 # a - here means the dependent product is not required by the parent and will not be setup
 qualifier     dk2nugenie     dk2nudata      ifdh_art           notes
+c14:debug     c14:debug      c14:debug      c14:debug
+c14:prof      c14:prof       c14:prof       c14:prof
 c7:debug      c7:debug       c7:debug       c7:debug
 c7:prof       c7:prof        c7:prof        c7:prof
+e26:debug     e26:debug      e26:debug      e26:debug
+e26:prof      e26:prof       e26:prof       e26:prof
 e20:debug     e20:debug      e20:debug      e20:debug
 e20:prof      e20:prof       e20:prof       e20:prof
-e19:debug     e19:debug      e19:debug      e19:debug
-e19:prof      e19:prof       e19:prof       e19:prof
 end_qualifier_list
 
 # Preserve tabs and formatting in emacs and vi / vim:
