@@ -1,2 +1,2 @@
 file(GLOB root_files *.root)
-install( FILES ${root_files} DESTINATION ${product}/${version}/data/NA49 )
+install( FILES ${root_files} DESTINATION data/NA49 )

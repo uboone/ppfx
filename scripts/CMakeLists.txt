@@ -1,4 +1,4 @@
 install_scripts()
 
 file(GLOB xml_files *.xml)
-install( FILES ${xml_files} DESTINATION ${product}/${version}/xml/ )
+install( FILES ${xml_files} DESTINATION xml/ )
