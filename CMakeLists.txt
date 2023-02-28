@@ -24,16 +24,14 @@ project(ppfx VERSION 02.16.00 LANGUAGES CXX)
 include(CetCMakeEnv)
 cet_cmake_env()
 
-# -D_GLIBCXX_USE_NANOSLEEP is needed to make std::this_thread::sleep_for available.
 cet_set_compiler_flags(DIAGS CAUTIOUS WERROR
                        NO_UNDEFINED
                        EXTRA_FLAGS -pedantic
-                       EXTRA_CXX_FLAGS -D_GLIBCXX_USE_NANOSLEEP
-                                       -Wno-unused-local-typedefs -Wno-variadic-macros)
+                       EXTRA_CXX_FLAGS -Wno-unused-local-typedefs -Wno-variadic-macros)
 cet_report_compiler_flags(REPORT_THRESHOLD VERBOSE)
 
-# these are minimum required versions, not the actual product versions
-# is is used for getting the art cmake modules
+find_package(nufinder REQUIRED EXPORT)
+
 find_package( art        REQUIRED )
 find_package( genie      REQUIRED )
 find_package( dk2nudata  REQUIRED )
