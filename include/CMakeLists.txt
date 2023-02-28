@@ -1,3 +1,3 @@
 
- install_headers(USE_PROJECT_NAME)
+ install_headers(NO_RELATIVE_SUBDIR)
 
